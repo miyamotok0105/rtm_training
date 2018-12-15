@@ -46,7 +46,15 @@ ssh ユーザー名@ホスト名
 ssh ubuntu@54.196.48.67 -t rtm_key.pem
 ```
 
+# SQL
 
+分かりやすい基礎の記事    
+
+https://qiita.com/chida09/items/d4b33a28b918958f267f
+
+シミュレータ    
+
+https://sqlzoo.net/wiki/SELECT_basics/ja
 
 
 
