@@ -35,6 +35,14 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
+rubyバージョンのインストールと適応。
+
+```
+rbenv install 2.5.3
+rbenv gloabl 2.5.3
+rbenv rehash
+```
+
 必要なモジュールを入れる。
 yumはcentosのパッケージマネージャ。
 
@@ -46,6 +54,8 @@ sudo yum -y install nodejs
 
 railsとbundlerを入れる。
 gemはrubyのパッケージマネージャ。
+その他のパッケージマネージャ。
+https://qiita.com/Sugimura-Laboratory/items/873bf2e266e02bf9e15f
 
 ```
 gem install -v 5.2.1 rails
@@ -120,10 +130,72 @@ UserViewへ移動
 処理を行うModelと結果を返すViewを選定する。
 司令する側
 
+# 3.デザインする
 
 
 
+```erb:app/views/layouts/application.html.erb
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+```
 
+の前に下記を追加。
+
+```erb:app/views/layouts/application.html.erb
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+```
+
+
+
+```erb:app/views/layouts/application.html.erb
+<%= yield %>
+```
+
+の前に下記を追加。
+
+```erb:app/views/layouts/application.html.erb
+<div class="container">
+  <%= yield %>
+</div>
+```
+
+
+<body>の直後に下記を追加。
+
+```
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">The Idea app</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/ideas">Ideas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+```
+
+</body>の直前に下記を追加。
+
+```
+<footer>
+  <div class="container">
+    Rails Girls 2018
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+```
 
 
 
