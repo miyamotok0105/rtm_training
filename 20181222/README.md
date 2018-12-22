@@ -91,4 +91,39 @@ rails db:migrate
 http://3.83.83.152:8080/
 
 
+## mvcとは
+
+画面に入力されるとViewを通ってControllerに行く。
+Controllerは入力内容を受け取り、ViewとModelの対を選定。
+
+例1.
+トップ画面からユーザー情報画面へのリンクをクリック
+→
+UserController
+→
+UserViewへ移動
+
+
+
+- Model
+
+ビジネスロジックの実行
+データの操作
+
+- View
+
+画面側の操作
+
+
+- Controller
+
+処理を行うModelと結果を返すViewを選定する。
+司令する側
+
+
+
+
+
+
+
 
