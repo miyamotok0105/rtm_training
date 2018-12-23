@@ -39,7 +39,7 @@ rubyバージョンのインストールと適応。
 
 ```
 rbenv install 2.5.3
-rbenv gloabl 2.5.3
+rbenv global 2.5.3
 rbenv rehash
 ```
 
@@ -75,8 +75,26 @@ mkdir projects
 cd projects
 rails new railsgirls
 cd railsgirls
+bundle install
 rails server
 ```
+
+ファイヤーウォールの設定でポートを開ける。
+centosの場合
+
+```
+#サービス起動
+systemctl start firewalld
+#自動起動設定
+systemctl enable firewalld
+#ステータス確認
+systemctl status firewalld
+#8080を開ける
+firewall-cmd --permanent --add-port=8080/tcp
+```
+
+awsはコンソール。
+
 
 
 実行する。
