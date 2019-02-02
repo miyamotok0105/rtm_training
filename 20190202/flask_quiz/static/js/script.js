@@ -15,24 +15,24 @@
 })(this, this.jQuery);
 
 
-$('.btn_ng').click(function() {
-    // alert("!");
-    $('.btn_ng').useSound('mousedown touchstart', '#ng_sound');
-});
+// $('.btn_ng').click(function() {
+//     // alert("!");
+//     $('.btn_ng').useSound('mousedown touchstart', '#ng_sound');
+// });
 
 
-$('.btn_ok').click(function() {
-    // alert("!");
-    $('.btn_ok').useSound('mousedown touchstart', '#ok_sound');
-});
+// $('.btn_ok').click(function() {
+//     // alert("!");
+//     $('.btn_ok').useSound('mousedown touchstart', '#ok_sound');
+// });
 
 
-$( document ).ready(function() {
-    anime({
-      targets: '.question',
-      translateX: 270,
-      delay: anime.stagger(100, {start: 500}) // delay starts at 500ms then increase by 100ms for each elements.
-    });
-});
+// $( document ).ready(function() {
+//     anime({
+//       targets: '.question',
+//       translateX: 270,
+//       delay: anime.stagger(100, {start: 500}) // delay starts at 500ms then increase by 100ms for each elements.
+//     });
+// });
 
 
