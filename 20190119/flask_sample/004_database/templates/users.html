@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Flask Example</title>
+  </head>
+  <body>
+    {% for row in results %}
+    <h3>Hello, {{row["name"]}}!</h3>
+    <h3>役職: {{row["yakusyoku"]}}</h3>
+    {% endfor %}
+  </body>
+</html>
